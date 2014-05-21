@@ -1,0 +1,7 @@
+extends layout
+block body
+	div(class="container")
+		div(class="row")
+			include sidenav
+		div(id="col-left", class="col-sm-11")
+			div(ng-view)

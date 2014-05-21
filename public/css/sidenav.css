@@ -1,0 +1,110 @@
+
+.modal {
+    z-index: 9999999999999;
+}
+.modal-body {
+    max-height: 200px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.modal-header h3 {
+    margin-top: 10px;
+}
+.modal-footer {
+    margin-top: 0;
+}
+.nav>li>a {
+    color: #fff;
+}
+#col-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    background: #383838;
+}
+#col-right .col-sm-3 {
+    padding-left: 10px;
+}
+#col-right .col-sm-3 .nav {
+    margin-top: 12px;
+}
+#col-right .col-sm-3 .nav>li.disabled {
+    opacity: 0.10;
+}
+#col-right .col-sm-3 .nav>li>a>img {
+    width: 30px;
+    height: 28px;
+    margin-left: 3px;
+}
+#col-right .nav>li>a:hover {
+    background: none;
+}
+#col-right .col-sm-8 a {
+    text-decoration: none;
+}
+#col-right .col-sm-8 a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+#col-right .col-sm-8 a h4 {
+    color: #fff;
+}
+#col-right .col-sm-8 button {
+    margin-top: 20px;
+}
+#modal-favorite-locations .del-btn:hover{
+    cursor:pointer;
+}
+#modal-favorite-locations .modal-body {
+    min-height: 225px;
+    max-height: 225px;
+    overflow-y: scroll;
+}
+#modal-favorite-locations-list>header {
+    font-weight: bold;
+    font-size: 14px;
+}
+#modal-favorite-locations-list>header>hr {
+    width: 100%;
+}
+#modal-favorite-locations-list>header .col-sm-1,
+#modal-favorite-locations-list>header .col-sm-3 {
+    padding-bottom: 5px;
+}
+#modal-favorite-locations-list>section>h1 {
+    text-align: center;
+}
+#modal-favorite-locations-list>section {
+    margin-top: -20px;
+    min-height:100px;
+}
+#col-left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+    -webkit-box-shadow: 1px 1px 4px 5px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px 4px rgba(0,0,0,0.5);
+}
+#col-left.out {
+    left: -258px;
+}
+#col-left-backdrop {
+    position: absolute;
+    opacity: 0.45;
+}
+#col-left-backdrop.fade {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    z-index: -1;
+}

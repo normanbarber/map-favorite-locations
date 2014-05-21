@@ -1,0 +1,21 @@
+div
+	table(align="center", ng-show="!isLoggedIn")
+		tr
+			td
+				span.label Username
+				br
+				input.username(type="text", name="login.username", value="login.username", ng-model="login.username")
+			td
+				span.label Password
+				br
+				input.password(type="password", name="login.password", value="login.password", ng-model="login.password")
+		tr
+			td(colspan="2", align="center")
+				input.btn(type="submit", ng-click="userLogin()", class="span5")
+		tr
+			td(colspan="2", align="center")
+				br
+				div.error {{ loginerror }}
+				br
+				a.signup(href="/signup") Not a user? Click here to sign up
+

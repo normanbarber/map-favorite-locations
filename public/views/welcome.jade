@@ -1,0 +1,56 @@
+div.contentwrapper.favorloca
+	section.row.searcharea(align="center")
+		div.span12
+			h1 Search for new location
+				span.username  {{ user.username }}
+			span.logout
+				a(href="/logout") Logout
+		div.span12
+			div.span4
+				input.search(type="text", maxlength="200",  name="favoritelocation.address", value="favoritelocation.address", ng-model="favoritelocation.address", placeholder="Address")
+
+			div.span4
+				select.type(ng-model="favoritelocation.name", ng-selected="locationtypes", ng-options="c.name for c in locationtypes", selected)
+
+			div.span2
+				input.btn-search.btn.btn-success(type="button", value="Search", ng-click="addNewLocation()", ng-show="!mapLoaded")
+				input.btn-add.btn.btn-success(type="button", value="ADD", ng-click="postLocation()", ng-show="mapLoaded")
+		div.span12
+			div {{ maperror }}
+	section.row
+		div(style="width: 100%; height:100%; display: inline-block;")
+			div#map_canvas
+
+div(id="modal-favorite-locations", class="modal-dir", data-visible="modalOpen")
+	div(class="modal-header")
+		h2  View all locations
+	div(id="modal-favorite-locations-list", class="modal-body")
+		div.contentwrapper.favorloca
+			section
+				div#locationslist(ng-show="!user.locationdata")
+					h3 No locations have been saved yet.
+				div#locationslist(ng-show="user.locationdata && user.locationdata.length > 0")
+					h3
+						span List of your favorite locations &nbsp;
+						span(name="user.username", value="user.username", ng-model="user.username") {{ user.username }}
+					table.table-bordered.table-striped
+						tbody
+							tr.row
+								td.span8(align="center")
+									strong Address
+								td.span4(align="center")
+									strong Location Type
+							tr.row(ng-repeat="item in user.locationdata", class="{{item.locationdata}}")
+								td.span8
+									div.addressoverflow(title="{{ item.address }}")
+										{{ item.address }}
+									div.linkswrapper
+										span.links
+											a(href="", ng-click="viewLocation()") View
+										span.links
+											a(href="", ng-click="deleteLocation()") Delete
+								td.span4(align="center")
+									{{ item.name }}
+								hr
+	div(class="modal-footer")
+		button(type="button", class="btn btn-primary btn-lg btn-block", data-ng-click="closeModal()") Close
