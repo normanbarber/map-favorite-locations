@@ -152,10 +152,10 @@ textarea{
 
 @media (min-width: 300px) and (max-width: 360px) and (orientation: portrait) {
     #col-left{
-        width: 80%;
+        width: 85%;
     }
     #col-right{
-        width:20%;
+        width:15%;
     }
     h1{
         float: left;
@@ -181,9 +181,9 @@ textarea{
         overflow-y: scroll;
     }
     .logout{
-        padding: 20px 10px;
+        padding: 20px 0px;
     }
-    .username, .password, .search, .type{
+    input.username, input.password, .search, .type{
         float: left;
         width: 100%;
     }
