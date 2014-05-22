@@ -9,8 +9,8 @@ module.exports = {
 	db: {
 		servers: {
 			favorloca: {
-                host: 'moe:moe@ds033629.mongolab.com',
-                port: 33629,
+				host: 'localhost',
+				port: 27017,
 				options: {
 					server: {
 						poolSize: 10
