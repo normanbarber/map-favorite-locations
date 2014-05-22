@@ -9,8 +9,8 @@ module.exports = {
 	db: {
 	  	servers: {
 	    	chat: {
-		    	host: 'ds033419.mongolab.com',
-		        port: 33419,
+		    	host: 'moe:moe@ds033629.mongolab.com',
+		        port: 33629,
                 options: {
                     server: {
                         poolSize: 10
