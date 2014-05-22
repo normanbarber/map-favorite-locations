@@ -9,7 +9,6 @@ favorloca.module('favorloca.controllers', [])
             }
         };
 
-
         $scope.isLoggedIn = false;
         $scope.login = {username: ''};
         $scope.disabled = true;

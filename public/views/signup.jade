@@ -1,24 +1,16 @@
 p
-    span Already a user?
-        a(href="/login") Click here to Login
-
-table(align="center")
-    tr
-        td.label Username
-        td
-            input.username(type="text", name="signup.username", value="signup.username", ng-model="signup.username")
-    tr
-        td.label Password
-        td
-            input.password(type="password", name="signup.password", value="signup.password", ng-model="signup.password")
-    tr
-        td.label Verify Password
-        td
-            input.verify(type="password", name="signup.verify", value="signup.verify", ng-model="signup.verify")
-    tr
-        td(colspan="2", align="center")
-            input.btn(type="submit", ng-click="signUpUser()", class="span6")
-    tr
-        td(colspan="2", align="center")
-            div.error {{ signuperror }}
+	span Already a user?
+		a(href="/login") Click here to Login
+	br
+	br
+	input.username(type="text", name="signup.username", value="signup.username", ng-model="signup.username", placeholder="Username")
+	br
+	input.password(type="password", name="signup.password", value="signup.password", ng-model="signup.password", placeholder="Password")
+	br
+	input.verify(type="password", name="signup.verify", value="signup.verify", ng-model="signup.verify", placeholder="Verify Password")
+	br
+	br
+	input.btn.submit(type="submit", ng-click="signUpUser()", class="span6")
+	br
+	div.error(align="center") {{ signuperror }}
 

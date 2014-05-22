@@ -16,9 +16,12 @@ h3{
     font-size: 18px;
 }
 
-input.username, input.password, input.verify{
+input.username, input.password, input.verify, input.submit{
+    float: left;
+    width: 100%;
     height:40px;
 }
+
 input.search, select.type{
     height:30px;
 }
@@ -116,7 +119,15 @@ textarea{
     padding: 10px 0;
 }
 
-
+@media (max-width: 800px) and (orientation: portrait){
+    input.search, input.type{
+        width:auto;
+    }
+    .btn-search{
+        float: right;
+        margin-left: 20px;
+    }
+}
 @media (min-width: 361px) and (max-width: 641px) and (orientation: landscape) {
     #col-left{
         width: 90%;
@@ -145,6 +156,7 @@ textarea{
         overflow-y: scroll;
     }
     .logout{
+        padding-top: 5px;
         padding-left: 10px;
     }
 }
@@ -160,6 +172,14 @@ textarea{
     h1{
         float: left;
         font-size: 18px;
+        line-height: 18px;
+    }
+    h3{
+        margin:0 auto;
+        line-height: 18px;
+    }
+    h3{
+        margin:0 auto;
         line-height: 18px;
     }
     input, select{
@@ -178,14 +198,25 @@ textarea{
     #modal-favorite-locations .modal-body {
         min-height: 125px;
         max-height: 125px;
+        padding: 0px 10px;
         overflow-y: scroll;
     }
-    .logout{
-        padding: 20px 0px;
+    .addressoverflow{
+        font-size: 12px;
     }
-    input.username, input.password, .search, .type{
+    .logout{
+        float: left;
+        padding: 20px 0px;
+        width: 100%;
+    }
+    input.username, input.password, input.verify, input.submit{
         float: left;
         width: 100%;
+    }
+    input.search, input.type{
+        float: left;
+        width: 100%;
+        height: 40px;
     }
     .links{
         font-size: 10px;
@@ -197,4 +228,5 @@ textarea{
     .searcharea .span12{
         margin-left: 5px;
     }
+
 }
