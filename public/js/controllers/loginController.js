@@ -33,7 +33,6 @@ favorloca.module('favorloca.controllers', [])
         };
 
         $scope.$on('userLoggedIn', function () {
-            $log.info('userLoggedIn11');
             $scope.isLoggedIn = true;
 
         });

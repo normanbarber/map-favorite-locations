@@ -4,6 +4,7 @@ body{
 h1{
     display:inline-block;
     font-size: 24px;
+    font-weight: normal;
     color: #ffffff;
     margin: 0 auto;
     padding: 0;
@@ -24,6 +25,7 @@ input.search, select.type{
 input.btn{
     padding: 10px;
 }
+
 .label{
     text-align: right;
     background:#ffffff;
@@ -112,4 +114,37 @@ textarea{
 }
 #locationslist table tr td{
     padding: 10px 0;
+}
+
+
+@media (min-width: 361px) and (max-width: 641px) and (orientation: landscape) {
+    #col-left{
+        width: 90%;
+    }
+    #col-right{
+        width:10%;
+    }
+    h1{
+        float: left;
+        font-size: 18px;
+    }
+    input, select{
+        width: auto;
+    }
+    .modal{
+        top:5%;
+    }
+    .modal-header, .modal-footer{
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    #modal-favorite-locations .modal-body {
+        min-height: 125px;
+        max-height: 125px;
+        overflow-y: scroll;
+    }
+    .logout{
+        padding-left: 10px;
+    }
 }

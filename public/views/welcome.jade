@@ -1,11 +1,11 @@
 div.contentwrapper.favorloca
 	section.row.searcharea(align="center")
-		div.span12
+		div.span12.row-fluid
 			h1 Search for new location
 				span.username  {{ user.username }}
 			span.logout
 				a(href="/logout") Logout
-		div.span12
+		div.span12.row-fluid
 			div.span4
 				input.search(type="text", maxlength="200",  name="favoritelocation.address", value="favoritelocation.address", ng-model="favoritelocation.address", placeholder="Address")
 
