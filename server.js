@@ -9,8 +9,8 @@ var express = require('express'),
 var app = express();
 var sessionColl = require('./lib/sessionCollection')();
 
-var host = config.db.servers.chat.host + ':' + config.db.servers.chat.port;
-var dbname = config.db.databases.chat.server;
+var host = config.db.servers.favorloca.host + ':' + config.db.servers.favorloca.port;
+var dbname = config.db.databases.favorloca.server;
 var url = path.join(host, dbname).replace(/\\/,"/");
 url = 'mongodb://' + url;
 
@@ -33,7 +33,7 @@ sessionOpts.store = new MongoStore({url: url});
 
 app.configure(function(){
     app.set('port', process.env.PORT || 5555);
-    app.set('views', __dirname + '\\public\\views');
+    app.set('views', __dirname + '/public/views');
     app.set('view engine', 'jade');
     app.use(express.cookieParser());
     app.use(express.bodyParser());
