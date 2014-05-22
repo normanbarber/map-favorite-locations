@@ -8,9 +8,9 @@ module.exports = {
     },
 	db: {
 	  	servers: {
-	    	chat: {
-		    	host: 'moe:moe@ds033629.mongolab.com',
-		        port: 33629,
+            favorloca: {
+		    	host: 'localhost',
+		        port: 27017,
                 options: {
                     server: {
                         poolSize: 10
@@ -22,7 +22,7 @@ module.exports = {
 	        }
 	    },
 	    databases: {
-	    	chat: {
+            favorloca: {
 	        	server: 'favoritelocations'
 	        }
 	    },
