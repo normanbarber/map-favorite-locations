@@ -148,3 +148,53 @@ textarea{
         padding-left: 10px;
     }
 }
+
+
+@media (min-width: 300px) and (max-width: 360px) and (orientation: portrait) {
+    #col-left{
+        width: 80%;
+    }
+    #col-right{
+        width:20%;
+    }
+    h1{
+        float: left;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    input, select{
+        width: auto;
+    }
+    .modal{
+        top:5%;
+        width: 280px;
+        left: 90%;
+    }
+    .modal-header, .modal-footer{
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    #modal-favorite-locations .modal-body {
+        min-height: 125px;
+        max-height: 125px;
+        overflow-y: scroll;
+    }
+    .logout{
+        padding: 20px 10px;
+    }
+    .username, .password, .search, .type{
+        float: left;
+        width: 100%;
+    }
+    .links{
+        font-size: 10px;
+    }
+    .searcharea{
+        left: 5%;
+        width: 90%;
+    }
+    .searcharea .span12{
+        margin-left: 5px;
+    }
+}
