@@ -29,10 +29,11 @@ favorloca.module('favorloca.controllers', [])
 			callGeoCoder(address);
 		};
 
-		$scope.viewLocation = function(){
-			address = $scope.user.locationdata[this.$index].address;
-			callGeoCoder(address);
-		};
+        $scope.viewLocation = function(){
+            var lat = $scope.user.locationdata[this.$index].lat;
+            var lng = $scope.user.locationdata[this.$index].lng;
+            showMap(lng, lat);
+        };
 
 		$scope.postLocation = function(){
 			// todo 2014-05-21: add comments/notes field to save a users comments for each location
@@ -117,8 +118,8 @@ favorloca.module('favorloca.controllers', [])
 									size: new google.maps.Size(150,50)
 								});
 
-							$scope.favoritelocation.lat = results[0].geometry.location.k;
-							$scope.favoritelocation.long = results[0].geometry.location.A;
+							$scope.favoritelocation.lat = results[0].geometry.location.lat();
+							$scope.favoritelocation.lng = results[0].geometry.location.lng();
 							var marker = new google.maps.Marker({
 								position: results[0].geometry.location,
 								map: map,
@@ -140,4 +141,22 @@ favorloca.module('favorloca.controllers', [])
 				});
 			}
 		}
+
+        function showMap(lng, lat) {
+
+            var latLng = new google.maps.LatLng(lat, lng);
+
+            var myOptions = {
+                zoom: 8,
+                center: latLng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: latLng
+            });
+
+        }
 	});

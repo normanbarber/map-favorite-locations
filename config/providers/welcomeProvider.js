@@ -9,11 +9,11 @@ module.exports = {
             var address = req.body.address;
             var name = req.body.name.name;
             var lat = req.body.lat;
-            var long = req.body.long;
+            var lng = req.body.lng;
 
             data.id = Math.floor(Math.random()*1000);
             data.lat = lat;
-            data.long = long;
+            data.lng = lng;
             data.address = address;
             data.name = name;
             updateView.updateLocation(username, data)

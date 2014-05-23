@@ -20,7 +20,7 @@ favorloca.module('favorloca.controllers', [])
                         $log.debug('searchresults service error');
                     }
                     else{
-                        console.log(user);
+                        $log.info(user);
                         userDataCache.put('userdata', user);
                         $rootScope.$broadcast('userLoggedIn');
                         $location.path('/welcome');
