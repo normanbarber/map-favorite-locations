@@ -2,8 +2,6 @@
 favorloca.module('favorloca.controllers', [])
 	.controller('Signup', function($rootScope, $scope, $log, $location, httpService, userDataCache){
         $scope.frienderror = null;
-//        $scope.user = user.data;
-
         $scope.signUpUser = function(){
             httpService.post('/signup', $scope.signup)
                 .success(function(user){
