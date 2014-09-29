@@ -14,7 +14,7 @@ Can be run in the browser. Features login page and signup page, and lets user se
 
 ### Running Test
 
-To run e2e tests you must download chromedriver.exe and selenium-server-standalone-2.33.0.jar and save into ./test/selenium
+To run e2e tests you must download [chromedriver.exe](http://chromedriver.storage.googleapis.com/index.html) and [selenium-server-standalone-2.33.0.jar ](http://docs.seleniumhq.org/download/)
 
 I didn't include these in the repo because of the size. 
 
