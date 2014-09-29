@@ -1,5 +1,9 @@
 # Map Favorite Locations
 
+### Heroku Demo
+[Map Demo](http://blooming-brushlands-5681.herokuapp.com/)
+
+Create a new user or login with admin/admin
 
 ### Running the app
 
