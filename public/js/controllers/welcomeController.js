@@ -82,7 +82,7 @@ favorloca.module('favorloca.controllers', [])
 
 		function initialize() {
 			geocoder = new google.maps.Geocoder();
-			var latlng = new google.maps.LatLng(37.7577,-122.4376);
+			var latlng = new google.maps.LatLng(39.961176,-82.998794);
 			var myOptions = {
 				zoom: 8,
 				center: latlng,
