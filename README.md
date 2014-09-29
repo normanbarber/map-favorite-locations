@@ -8,7 +8,7 @@ Create a new user or login with admin / admin
 
 Can be run in the browser. Features login page and signup page, and lets user search for a location within the Google maps api. After user finds a location, then they have the option to save the locations to their list. Programmed with mongodb, express and jade. e2e tests using Protractor, unit tests(client) with karma-mocha and unit tests(server) using mocha.  Running demo from Heroku and Mongolab.
 
-### Running in the browser (after you clone the repo run an npm install)
+### Running in the browser
 
     node server
 
